@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="../static/login.css">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <script>
+        (function(doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function() {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if (clientWidth >= 640) {
+                        docEl.style.fontSize = '100px';
+                    } else {
+                        docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+                    }
+                };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+    <title>登录</title>
+</head>
+
+<body>
+    <div class="login-box">
+        <p class="login-title">我要报名</p>
+        <form action="">
+            <label for="name" class="ligin-label">姓名：</label>
+            <p class="login-input"><input type="text" id="name" value=""></p>
+            <label for="sex" class="ligin-label">性别：</label>
+            <p class="login-input"><input type="text" id="sex"></p>
+            <label for="phone" class="ligin-label">电话：</label>
+            <p class="login-input"><input type="text" id="phone"></p>
+            <label for="email" class="ligin-label">邮箱：</label>
+            <p class="login-input"><input type="text" id="email"></p>
+            <label for="age" class="ligin-label">年龄：</label>
+            <p class="login-input"><input type="text" id="age"></p>
+            <label for="address" class="ligin-label">家庭住址：</label>
+            <p class="login-input"><input type="text" class="address"></p>
+            <div class="login-btn">
+                <button>取消</button>
+                <button onclick="submit()">确定</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+<script>
+    window.onload = function() {
+
+    }
+
+    function submit() {
+
+    }
+</script>
+
+</html>
